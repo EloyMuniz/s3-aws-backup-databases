@@ -1,0 +1,27 @@
+{
+  "name": "s3-aws-backup-databases",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/EloyMuniz/s3-aws-backup-databases.git",
+  "author": "Eloy <eloymjunior00@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "typescript": "^5.4.5"
+  },
+  "scripts": {
+    "generate": "npx prisma generate",
+    "deploy": "npx prisma migrate deploy",
+    "dev": "prisma generate && ts-node-dev --transpile-only --ignore-watch node_modules src/server.ts",
+    "build": "tsup src",
+    "start": "node dist/server.js"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.14.0",
+    "aws-sdk": "^2.1628.0",
+    "express": "^4.19.2",
+    "node-cron": "^3.0.3",
+    "pg": "^8.11.5",
+    "prisma": "^5.14.0"
+  }
+}
